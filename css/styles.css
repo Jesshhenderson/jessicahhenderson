@@ -1,0 +1,1360 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT|Roboto');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------------------------- Standard Styles ---------------------------- */
+
+body {
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/* -- COVER PAGE STYLES -- */
+
+header {
+	background-color: #613942;
+}
+
+.homepage {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: repeat(5,20vh);
+  	grid-template-areas:
+  	"head head head head"
+  	"lside logo logo rside"
+  	"lside logo logo rside"
+  	"lside logo logo rside"
+  	"lside foot foot rside"
+}
+.backgroundlogo {
+	grid-area: logo;
+	align-items: center;
+	margin: 0 auto;
+	padding-top: 40px; 
+	opacity: 0.5;
+}
+
+.click1 {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2px;
+	color: white;
+	text-decoration: none;
+	padding: -10;
+	display: grid;
+	grid-area: foot;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	z-index: 2;
+}
+
+
+/* animation */
+
+.object {
+    position: absolute;
+    width: 90%;
+    bottom: 24%;
+    left: 5.5%;
+}
+
+.wagons {
+    animation-name: drive;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes drive{
+  from {transform: translateX(1000px);}
+  to {transform: translateX(0px);}
+}
+
+/* Image change */
+
+.object2 {
+	position: absolute;
+	width: 90%;
+    bottom: 24%;
+    left: 5.5%; 
+}
+
+/* ---------------------------- PAGE 1 STYLES ---------------------------- */
+
+/* -- Nav Styles -- */
+
+.aboutpage {
+	width: 100%;
+	height: 218px;
+}
+
+.navlogo {
+	height: 140px;
+	width: 140px;
+}
+
+nav {
+	padding: 40px 20px 20px 20px;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 100%;
+	grid-template-areas: 
+	"nav1 nav2 nav3 nav4 nav5" 
+}
+
+#about {
+	grid-area: nav1;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-decoration: none;
+	border-radius: 12px;
+	color: #FFFAF6;
+	background-color: #613942;
+}
+
+#about:hover {
+	color: #E2BAB3;
+	-webkit-animation-name: shake;
+ 	animation-name: shake;
+}
+
+#gallery {
+	grid-area: nav2;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-decoration: none;
+	color: #FFFAF6;
+}
+
+#gallery:hover {
+	color: #E2BAB3;
+	-webkit-animation-name: shake;
+  	animation-name: shake;
+}
+
+#navlogo {
+	grid-area: nav3;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-decoration: none;
+	color: #FFFAF6;
+}
+
+#menu {
+	grid-area: nav4;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-decoration: none;
+	color: white;
+}
+
+#menu:hover {
+	color: #E2BAB3;
+	-webkit-animation-name: shake;
+  	animation-name: shake;
+}
+
+#shop {
+	grid-area: nav5;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	text-decoration: none;
+	color: #FFFAF6;
+}
+
+#shop:hover {
+	color: #E2BAB3;
+	-webkit-animation-name: shake;
+  	animation-name: shake;
+}
+
+/* Section 1 - carouselle */
+/*
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item, .active.left, .active.right {
+            opacity: 0;
+        }
+
+        .active, .next.left, .prev.right {
+            opacity: 1;
+        }
+
+        .next, .prev, .active.left, .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+
+    .carousel-control {
+        z-index: 6;
+    }
+
+
+
+.carousel, .carousel-inner, .carousel-inner .item {
+    height: 100vh;
+}
+
+.item:nth-child(1) {
+    background-image: url(../img/carousel1.png);
+}
+
+.item:nth-child(2) {
+    background-image: url(../img/carousel2.png);
+}
+
+.item:nth-child(3) {
+    background-image: url(../img/carousel3.png);
+}*/
+
+/* Section 1 */
+
+#intro {
+	grid-area: display;
+	background-image: url(../img/carousel3.png);
+	background-repeat: none;
+	background-size: cover;
+	height: 80vh;
+}
+
+.page1title {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 6px;
+	color: #FFFAF6;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 200px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+/* Section 2 - Who Are We - */
+
+#section01 {
+	grid-area: who;
+	width: 100%;
+	background-color: #FFFAF6;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.section {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.section.fade-in {
+	opacity: 1;
+}
+
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.aboutshortinfo {
+	width: 50%;
+	margin: 0 auto;
+	padding: 100px 0 200px;
+	display: flex;
+	justify-content: center;
+}
+
+.vehicleicons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: -50px;
+}
+
+.vectoricon {
+	height: 151px;
+	margin: 20px;
+}
+
+.introducing {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	text-decoration: none;
+	color: #405057;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.introducing:hover {
+	color: #849973;
+}
+
+
+.vehiclebutton {
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.findoutmore {
+	background-color: #613942;
+	border-radius: 12px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 14px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.findoutmore:hover {
+	background-color: #849973;
+}
+
+/* Section 3 - Our Wines - */
+
+#section02 {
+	grid-area: wine;
+	background-image: url(../img/bubblesandglasses.gif);
+	background-repeat: none;
+	width: 100%;
+	height: 1024px;
+	display: flex;
+	align-items: center;
+}
+
+.wineinfo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 666px;
+	height: 437px;
+	background-color: #E8DBCB;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.wineinfo p {
+	padding: 50px 20px 20px;
+	margin: 0 auto;
+}
+
+.winebutton {
+	padding-top: 50px;
+}
+
+/* Section 4 - Gallery - */
+
+#section03 {
+	grid-area: gal;
+	width: 100%;
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-template-rows: repeat(2,50vh);
+	grid-template-areas: 
+	"gal1 gal2 gal3"
+	"gal4 gal5 gal6";
+}
+
+.galinfo {
+	grid-area: 1 / 2 / span 2 / span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+.gallery1 {
+	grid-area: gal1;
+	background-image: url(../img/gallery1.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.gallery2 {
+	grid-area: gal2;
+	background-image: url(../img/gallery2.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.gallery3 {
+	grid-area: gal3;
+	background-image: url(../img/gallery3.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.gallery4 {
+	grid-area: gal4;
+	background-image: url(../img/gallery4.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.gallery5 {
+	grid-area: gal5;
+	background-image: url(../img/gallery5.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+.gallery6 {
+	grid-area: gal6;
+	background-image: url(../img/gallery6.png);
+	background-repeat: no-repeat;
+	background-size: cover; 
+	opacity: 0.5;
+}
+ 
+.gallery1:hover {
+	opacity: 1;
+} 
+
+.gallery2:hover {
+	opacity: 1;
+} 
+
+.gallery3:hover {
+	opacity: 1;
+} 
+
+.gallery4:hover {
+	opacity: 1;
+} 
+
+.gallery5:hover {
+	opacity: 1;
+} 
+
+.gallery6:hover {
+	opacity: 1;
+} 
+
+/* Footer styles */
+
+footer {
+	grid-area: foot;
+	background-color: #613942;
+	height: 100px;
+	width: 100%;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-align: center;
+
+}
+
+footer h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+/* ---------------------------- ABOUT PAGE STYLES ---------------------------- */
+
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.gridcontainer {
+	display: grid;
+	grid-template-columns: repeat(3,33.333vw);
+	grid-template-rows: 80vh 100vh 100vh 100vh 100vh;
+	grid-template-areas: 
+	"intro intro intro"
+	"sparkwine sparkwine sparkwine"
+	"mccbike mccbike mccbike"
+	"caravan caravan caravan"
+	"ourvino ourvino ourvino";
+}
+ /* Section1 */
+
+.about1 {
+	background-image: url(../img/grapesandroses1.png);
+	background-repeat: none;
+	background-size: cover;
+	grid-area: intro;
+}
+
+.block {
+	width: 600px;
+	background-color: #36374B;
+	color: #FFFAF6;
+	padding: 20px;
+	margin: 150px auto;
+}
+
+.block p {
+	padding: 20px;
+	line-height: 1.5em;
+	letter-spacing: 1.5px;
+	font-family: 'Roboto', sans-serif;
+}
+
+ /* Section2 (WINE) */
+
+ .about2 {
+	background-image: url(../img/bubblesandflowers.png);
+	grid-area: sparkwine;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.85;
+}
+/* Triggers Javascript */
+
+.section-about {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.section-about.fade-in {
+	opacity: 1;
+}
+
+ .cardflipfront {
+ 	background-color: #36374B;
+ 	width: 50%;
+ 	height: 50px;
+ 	padding: 15px 10px;
+ 	color: #FFFAF6;
+ 	margin: 300px auto;
+ 	opacity: 1;
+ }
+
+ .cardflipback h3 {
+ 	color: #0B0B0B;
+ 	margin-right: 0;
+ 	font-weight: bolder;
+ }
+
+/* info flip */
+
+.flip-container {
+  perspective: 1000px;
+  margin: 100px auto;
+  grid-area: sparkwine;
+}
+
+.flip-container, .front, .back {
+  width: 877px;
+  height: 624px;
+}
+
+.flipper {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+/* Wine Wagon Flip */
+
+.front {
+  background-image: url(../img/drinkingsw.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  padding: 20px;
+  background-color: #E8DBCB;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.back h3 {
+	font-weight: bolder;
+}
+
+.back p {
+	width: 80%;
+	text-align: left;
+	padding-top: 40px;
+}
+
+.back img {
+	width: 50%;
+}
+
+.aboutmorebutton {
+	display: flex;
+	justify-content: center;
+	height: 45%;
+	padding-top: 20px;
+}
+
+ /* Section3 (MCC) */
+
+.about3 {
+	background-image: url(../img/polkadot.png);
+	grid-area: mccbike;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.85;
+}
+
+ .cardflipfront2 {
+ 	background-color: #907874;
+ 	width: 40%;
+ 	height: 50px;
+ 	padding: 15px 10px;
+ 	color: #FFFAF6;
+ 	margin: 300px auto;
+ 	opacity: 1;
+ }
+
+/* info flip 2 */
+
+.flip-container2 {
+  perspective: 1000px;
+  margin: 100px auto;
+  grid-area: mccbike;
+}
+
+.flip-container2, .front2, .back2 {
+  width: 877px;
+  height: 624px;
+}
+
+.flipper2 {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.flip-container2:hover .flipper2 {
+  transform: rotateY(180deg);
+}
+
+.front2, .back2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+/* MCC Bike Flip */
+
+.front2 {
+  background-image: url(../img/mccbike.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back2 {
+  padding: 20px;
+  background-color: #E8DBCB;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.back2 h3 {
+	font-weight: bolder;
+}
+
+.back2 p {
+	width: 80%;
+	text-align: left;
+	padding-top: 40px;
+}
+
+.back2 img {
+	width: 392px;
+}
+
+.aboutmorebutton2 {
+	display: flex;
+	justify-content: center;
+	height: 223px;
+	padding-top: 20px;
+}
+
+ /* Section4 (cocktail) */
+
+.about4 {
+	background-image: url(../img/cocktailpattern1.png);
+	grid-area: caravan;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.85;
+}
+
+ .cardflipfront3 {
+ 	background-color: #849973;
+ 	width: 50%;
+ 	height: 50px;
+ 	padding: 15px 10px;
+ 	color: #FFFAF6;
+ 	margin: 300px auto;
+ 	opacity: 1;
+ }
+
+/* info flip 3 */
+
+.flip-container3 {
+  perspective: 1000px;
+  margin: 100px auto;
+  grid-area: mccbike;
+}
+
+.flip-container3, .front3, .back3 {
+  width: 877px;
+  height: 624px;
+}
+
+.flipper3 {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.flip-container3:hover .flipper3 {
+  transform: rotateY(180deg);
+}
+
+.front3, .back3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+
+/* Cocktail Van Flip */
+
+.front3 {
+  background-image: url(../img/cocktailvan.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back3 {
+  padding: 20px;
+  background-color: #E8DBCB;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.back3 h3 {
+	font-weight: bolder;
+}
+
+.back3 p {
+	width: 80%;
+	text-align: left;
+	padding-top: 40px;
+}
+
+.back3 img {
+	width: 400px;
+}
+
+.aboutmorebutton3 {
+	display: flex;
+	justify-content: center;
+	height: 223px;
+	padding-top: 20px;
+}
+
+ /* Section5 (our wines) */
+
+.about5 {
+	background-image: url(../img/winefarm.png);
+	grid-area: ourvino;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+
+.cardflipfront4 {
+ 	background-color: #907874;
+ 	width: 30%;
+ 	height: 50px;
+ 	padding: 15px 10px;
+ 	color: #FFFAF6;
+ 	margin: 300px auto;
+ 	opacity: 1;
+ }
+
+/* info flip 4 */
+
+.flip-container4 {
+  perspective: 1000px;
+  margin: 100px auto;
+  grid-area: mccbike;
+}
+
+.flip-container4, .front4, .back4 {
+  width: 877px;
+  height: 624px;
+}
+
+.flipper4 {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.6s;
+}
+
+.flip-container4:hover .flipper4 {
+  transform: rotateY(180deg);
+}
+
+.front4, .back4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+
+/* Our Wines Flip */
+
+.front4 {
+  background-image: url(../img/lavanderchamp.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back4 {
+  padding: 20px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.back4 h3 {
+	font-weight: bolder;
+}
+
+.back4 p {
+	width: 80%;
+	text-align: left;
+	padding-top: 40px;
+}
+
+.back4 img {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* text appear on hover */
+
+.winecontainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.container {
+    position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 151px;
+  height: 233px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #907874;
+  font-size: 14px;
+  padding: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.text a {
+	text-decoration: none;
+	color: #FFFAF6;
+
+}
+
+/* ---------------------------- MENU PAGE STYLES ---------------------------- */
+
+.menugridcontainer {
+	display: grid;
+	grid-template-columns: repeat(3,33.333vw);
+	grid-template-rows: 372px 456px 297px;
+	grid-template-areas: 
+	"header header header"
+	"menu1 menu2 menu3"
+	"moreinfo moreinfo moreinfo";
+}
+
+/* -- Menu Heading -- */
+
+.menuheading {
+	grid-area: header;
+	background-image: url(../img/menucoverphoto.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.menuheading h2 {
+	margin: 180px auto;
+}
+
+.cocktailcontainer {
+	grid-area: menu1, menu2, menu3;
+	width: 100%;
+	height: 456px;
+}
+
+/* -- Basic Betty Cocktail Menu -- */
+
+.basicbetty {
+	grid-area: menu1;
+	background-image: url(../img/basicbetty.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 100px auto;
+}
+
+/* Menu Name */
+
+#edit {
+	grid-area: menu1;
+	margin: 200px auto;
+	display: flex;
+	justify-content: center;
+}
+
+.bbtitle {
+	display: flex;
+	flex-direction: row;
+	background-color: none;
+}
+
+button {
+	background-color: #E2BAB3;
+	border-radius: 12px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.menunames {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* Hover */
+
+
+/* -- Sassy Susan Cocktail Menu -- */
+
+.sassysusan {
+	grid-area: menu2;
+	background-image: url(../img/sassysusan.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Menu Name */
+
+.menuname2 {
+	grid-area: menu2;
+	margin: 200px auto;
+}
+
+/* -- Retro Reggie Cocktail Menu -- */
+
+.retroreggie {
+	grid-area: menu3;
+	background-image: url(../img/retroreggie.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Menu Name */
+
+.menuname3 {
+	grid-area: menu3;
+	margin: 200px auto;
+}
+
+/* -- More info button -- */
+
+.moreinfo {
+	grid-area: moreinfo;
+	background-image: url(../img/menusectionbackground.png);
+}
+
+.moreinfo a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #36374B;
+	border-radius: 12px;
+	width: 400px;
+	padding: 40px;
+	margin: 90px auto;
+	text-decoration: none;
+	color: #FFFAF6;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+
+/* Image Appears - cocktail menus */
+
+	.menu-wrapper {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		left: 0px;
+		top: 0px;
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		background: #000;
+		opacity: 0.8;
+		background-color: #000;
+		transition: opacity 1.3s;
+	}
+
+	.body-modal {
+		max-height: 0px;
+		opacity: 1;
+		overflow: visible;
+		position: relative;
+		margin: 0 auto;
+		z-index: 5;
+		box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+	}
+
+	.body-modal img {
+		height: 100vh;
+		margin: 10px;
+	}
+
+
+	/*.inner-body-modal {
+		padding: 25px;
+		position: relative;
+		z-index: 1;
+	}*/
+
+
+    
+/*    .menu-closer {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all 0.9s;	
+    }
+
+    .overlay-close {
+      opacity:0.5;
+      transition:opacity 1.3s;
+    }
+*/
+
+
+
+
+/*
+&.active-modal {
+    overflow:hidden;
+    section.header {
+      transition:0.2s;
+      -webkit-filter: blur(2px);
+      filter: blur(2px);
+    }
+  }
+}
+
+.cocktailcontainer {
+	overflow: hidden;
+}
+
+.box-modal {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	background: #000;
+	opacity: 0;
+	transition:opacity 1.3s;
+}
+
+.body-modal {
+	max-height: 0px;
+	opacity: 0;
+	overflow: hidden;
+}
+
+.inner-body-modal {
+	padding: 25px;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+}
+
+&.modal-show {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: visible;
+	transition: all 0.9s;
+	.overlay {
+		opacity: 0.5;
+		transition: opacity 1.3s;
+	}
+	.body-modal {
+		max-height: 1000px;
+		opacity: 1;
+		transition: 0.3s max-height 0.8s, 0.3s opacity
+
+
+/* Scrolling */
+
+
+
+
+/* ----------- MENU PAGE.2 ------ 
+
+#menupage {
+  &.active-modal {
+    overflow:hidden;
+
+    header.header {
+      transition:0.2s;
+      -webkit-filter: blur(2px);
+      filter: blur(2px);
+    }
+  }
+}
+
+header.header {
+  width :100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  transition:0.2s;
+  background: url('../img/menucoverphoto.png')repeat center center;
+  background-size:contain;
+}
+
+.container {
+  .avatar {
+    width:120px;
+    height:120px;
+    overflow:hidden;
+    border-radius:100%;
+    margin-bottom:15px;
+    img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border:none;
+    }
+  }
+   span, {
+      display:inline-block;
+      background:#fff;
+      border-radius:100px;
+      padding:10px 20px;
+      font-size:11px;
+      font-weight:700;
+      margin-top:10px;
+      cursor:pointer; 
+    }
+}
+
+.box-modal {
+  position:fixed;
+  width:100%;
+  height:100vh;
+  left:0px;
+  top:0px;
+  visibility: hidden;
+
+  .overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0px;
+    top:0px;
+    background:#000;
+    opacity:0;
+    transition:opacity 0.5s;
+  }
+  
+  .body-modal {
+    max-height:0px;
+    opacity:0;
+    overflow:hidden;
+
+    .inner-body-modal {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.43);
+    }
+  }
+  
+   &.modal-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    transition: all 0.9s;
+
+    .overlay {
+      opacity:0.5;
+      transition:opacity 1.3s;
+    }
+     
+     .body-modal {
+       max-height:1000px;
+       opacity:1;
+       transition:0.3s max-height 0.8s, 0.3s opacity 0.6s, ;
+     }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
